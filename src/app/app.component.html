@@ -1,18 +1,1 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <table class="table table-striped">
-        <tr>
-          <th>#</th>
-          <th>Cantidad de clientes</th>
-          <th>Hora de ingreso</th>
-        </tr>
-        <tr *ngFor="let i of info">
-          <td>{{ i.id }}</td>
-          <td>{{ i.cantidad }}</td>
-          <td>{{ i.created_at | date:'M/d/yyyy HH:mm:ss' }}</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <form action="">
+        <h1>Total clientes últimas 3 horas: {{ total }}</h1>
+        <table>
+          <tr>
+            <th>Cantidad de ingreso</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>
+              <input class="form-control" min="1" max="20" required placeholder="Ingresa la cantidad" type="number" name="'cantidad" [(ngModel)]="_cantidad">
+            </td>
+            <td>
+              <input class="btn btn-primary" type="submit" value="Contar" (click)="agregar()">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      # | <b>Cantidad</b> - Hora de Ingreso
+    </div>
+  </div>
+</div>
+<app-listado-ingreso *ngFor="let i of info" [lista]="i"></app-listado-ingreso>
